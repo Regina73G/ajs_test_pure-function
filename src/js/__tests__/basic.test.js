@@ -1,7 +1,13 @@
-import sum from '../basic';
+import { healthHero } from "../app.js";
 
-test('should sum', () => {
-  const result = sum([1, 2, 3]);
+const heroes = [
+  ["Маг", 90, "healthy"],
+  ["Воин", 50, "wounded"],
+  ["Лучник", 15, "wounded"],
+  ["Ассасин", 10, "critical"]
+];
 
-  expect(result).toBe(6);
-});
+test.each(heroes)("testing heroes function with %n name and %h healt", (name, health, expectedStatus) => {
+  const result = healthHero({ name: name, health: health });
+  expect(result).toBe(expectedStatus);
+})
