@@ -1,5 +1,5 @@
 {
-  "name": "ajs",
+  "name": "ajs_test_pure-function",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,13 @@
     "build": "webpack --mode production",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "preshow:coverage": "npm run coverage",
-    "show:coverage": "live-server coverage/lcov-report",
-    "preshow:dist": "npm run build",
-    "show:dist": "live-server dist"
+    "test": "jest --coverage"
   },
-  "author": "Rysaev Damir <freepad@ya.ru>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Regina73G/ajs_test_pure-function.git"
+  },
+  "author": "Regina <yanadera@mail.ru>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -33,7 +32,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "core-js": "^3.43.0"
   }
 }
-
-
